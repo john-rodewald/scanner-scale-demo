@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>WebUSB PoC</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" />
+</head>
+
+<body>
+    <h1>WebUSB PoC</h1>
+    <input class="button" type="button" id="connectScaleButton" value="Connect Scale" />
+    <!-- <input class="button" type="button" id="connectSerialButton" value="Connect Serial" />  -->
+    <div id="adapterSelection">
+        <input type="radio" id="inline" name="usbSerialAdapter" value="InLine" checked="true">
+        <label for="inline" id="inlineLabel">InLine</label>
+        <input type="radio" id="exsys" name="usbSerialAdapter" value="Exsys">
+        <label for="exsys" id="exsysLabel">Exsys</label><br>
+    </div>
+
+    <input class="button" type="button" id="disconnectScaleButton" value="Disconnect Scale" />
+
+    <br />
+    <p>
+        <h4>Scanned Codes</h4>
+        <textarea class="textarea" rows="10" cols="50" id="scannedCodes" title="ScannedCodes"></textarea><br/>
+        <input class="button" type="button" id="clearButton" value="Clear" />    
+    </p>
+    
+    <hr />
+    <br />
+
+    <div id="connected">
+        <input class="button" type="button" id="beepButton" value="Send Beep" />
+    </div>
+
+    <div id=log>
+    </div>
+    <script src="onscan.js" type="text/javascript"></script>
+    <script src="index.js" type="text/javascript"></script>
+</body>
+
+</html>
